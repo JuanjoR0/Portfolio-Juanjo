@@ -207,17 +207,19 @@ color: #68bef7;
   background: linear-gradient(45deg, #68bef7, #29a8ff, #68bef7);
   background-size: 200% 200%;
   animation: borderGlow 4s linear infinite;
-  box-shadow: 0 0 10px #68bef7, 0 0 15px #29a8ff, 0 0 20px #68bef7;
+  box-shadow: 0 0 10px #68bef7, 0 0 15px #29a8ff, 0 0 1px #68bef7;
   transition: box-shadow 0.5s ease-in-out;
 }
 .profile-wrapper:hover {
-  box-shadow: 0 0 25px #68bef7, 0 0 35px #29a8ff, 0 0 40px #68bef7;
+  box-shadow: 0 0 20px #68bef7, 0 0 20px #29a8ff, 0 0 20px #68bef7;
 }
 .profile-img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  object-fit: cover;
+  object-fit: contain;
+  background-color: #0A0E21; /* mismo color que tu fondo */
+  
 }
 @keyframes borderGlow {
   0% {
