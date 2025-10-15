@@ -662,6 +662,7 @@ color: #68bef7;
 @media (max-width: 700px) {
   .container{
     max-width: 360px;
+    margin-top: 120px;
   }
   .social-icons {
     gap: 12px;
