@@ -387,6 +387,7 @@ color: #68bef7;
 .project-info h3 {
   font-size: 1.4rem;
   margin-bottom: 10px;
+  text-decoration: underline;
 }
 .project-info h3 a{
   text-decoration: none;
