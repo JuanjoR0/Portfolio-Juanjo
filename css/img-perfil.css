@@ -1,0 +1,40 @@
+.glow-wrapper {
+  position: relative;
+  width: 308px;   /* ajusta a tu gusto */
+  height: 308px;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+  z-index: 10;
+  object-fit: contain;
+  background-color: #0A0E21; 
+}
+
+/* ----- ANILLO GLOW GIRATORIO ----- */
+.glow-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  
+  background: conic-gradient(
+    from 0deg,
+    #00e1ff,
+    #8f00ff,
+    #00e1ff
+  );
+
+  filter: blur(18px);
+  animation: spin 3s linear infinite;
+  z-index: 1;
+}
+
+/* GLITCH SMOOTH - GIRA DESPACIO */
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

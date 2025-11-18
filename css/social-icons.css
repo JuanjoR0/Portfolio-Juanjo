@@ -1,0 +1,113 @@
+.social-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: flex-end; 
+  margin: 0; 
+  width: auto;
+}
+
+
+/* ---------- GLOBAL BUTTON STYLE ---------- */
+.social-btn {
+  position: relative;
+  padding: 12px;
+  border-radius: 50%;
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+.social-btn:hover {
+  transform: scale(1.1) rotate(10deg);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.social-btn:active {
+  transform: scale(0.95) rotate(0deg);
+}
+
+/* ---------- SHINE EFFECT ---------- */
+.shine {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.15), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.7s ease-out;
+}
+
+.social-btn:hover .shine {
+  transform: translateX(100%);
+}
+
+/* SVG */
+.icon svg {
+  width: 18px;
+  height: 18px;
+  transition: 0.3s ease;
+}
+
+/* ---------- COLORS PER BUTTON ---------- */
+.Git svg {
+  fill: white;
+}
+
+.Whattsapp {
+  border-color: rgba(0, 255, 0, 0.2);
+}
+.Whattsapp:hover {
+  border-color: rgba(0, 255, 0, 0.5);
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+}
+.Whattsapp svg {
+  fill: #22c55e;
+}
+.Whattsapp:hover svg {
+  fill: #4ade80;
+}
+
+.linkedin {
+  border-color: rgba(99, 102, 241, 0.2);
+}
+.linkedin:hover {
+  border-color: rgba(99, 102, 241, 0.5);
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+}
+.linkedin svg {
+  fill: #6366f1;
+}
+.linkedin:hover svg {
+  fill: #818cf8;
+}
+
+.instagram {
+  border-color: rgba(239, 68, 68, 0.2);
+}
+.instagram:hover {
+  border-color: rgba(239, 68, 68, 0.5);
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+}
+
+@media (max-width: 1000px) {
+  .icon svg {
+    width: 18px;
+    height: 15px;
+  }
+  .social-btn {
+    padding: 6px;
+  }
+  .social-grid {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 700px) {
+  .social-grid {
+    display: none;
+  }
+}
