@@ -1,112 +1,77 @@
 // DESPLIEGUE IDIOMAS 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const toggleBtn = document.getElementById("langToggle");
-    const menu = document.getElementById("langMenu");
-    const langOptions = document.querySelectorAll(".lang-option");
+    const langWidgets = document.querySelectorAll(".lang-switch");
 
-    let langMenuTimeout; // ⬅ temporizador para autocierre
+    langWidgets.forEach(widget => {
 
-    // ---- FUNCIONES DE APERTURA / CIERRE ----
+        const toggleBtn = widget.querySelector(".lang-icon");
+        const menu = widget.querySelector(".lang-menu");
+        const langOptions = widget.querySelectorAll(".lang-option");
 
-    function openLangMenu() {
-        menu.classList.add("open");
+        let timeout;
 
-        // Reiniciar temporizador si ya existía
-        clearTimeout(langMenuTimeout);
-
-        // Autocerrar en 4 segundos
-        langMenuTimeout = setTimeout(() => {
-            menu.classList.remove("open");
-        }, 4000);
-    }
-
-    function closeLangMenu() {
-        menu.classList.remove("open");
-        clearTimeout(langMenuTimeout);
-    }
-
-    // ---- ABRIR/CERRAR POR CLIC ----
-    toggleBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-
-        if (menu.classList.contains("open")) {
-            closeLangMenu();
-        } else {
-            openLangMenu();
+        function openMenu() {
+            menu.classList.add("open");
+            clearTimeout(timeout);
+            timeout = setTimeout(() => menu.classList.remove("open"), 4000);
         }
-    });
 
-    // ---- CERRAR AL HACER CLIC FUERA ----
-    document.addEventListener("click", () => {
-        closeLangMenu();
-    });
+        function closeMenu() {
+            menu.classList.remove("open");
+            clearTimeout(timeout);
+        }
 
-    // Evitar que el clic dentro del menú lo cierre
-    menu.addEventListener("click", (e) => {
-        e.stopPropagation();
-    });
-
-    // ---- CLICK EN ES/EN ----
-    langOptions.forEach(btn => {
-        btn.addEventListener("click", () => {
-
-            const selectedLang = btn.dataset.lang;
-
-            // Guardar selección
-            localStorage.setItem("lang", selectedLang);
-
-            // Cargar traducción sin recargar
-            loadLanguage(selectedLang);
-
-            // Actualizar botón activo
-            document.querySelectorAll(".lang-option").forEach(opt => {
-                opt.classList.toggle("active", opt.dataset.lang === selectedLang);
-            });
-
-            // Cerrar menú después de seleccionar
-            closeLangMenu();
+        toggleBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            menu.classList.contains("open") ? closeMenu() : openMenu();
         });
-    });
 
+        menu.addEventListener("click", (e) => e.stopPropagation());
+
+        document.addEventListener("click", closeMenu);
+
+        langOptions.forEach(opt => {
+            opt.addEventListener("click", () => {
+                const selected = opt.dataset.lang;
+
+                loadLanguage(selected);
+
+                // poner activo dentro de ESTE widget
+                langOptions.forEach(b =>
+                    b.classList.toggle("active", b.dataset.lang === selected)
+                );
+
+                closeMenu();
+            });
+        });
+
+    });
 });
 
 
-
-//CAMBIAR IDIOMA
+// SISTEMA DE TRADUCCIÓN 
 let currentLang = "en";
 
-// Cargar archivo JSON según el idioma
 async function loadLanguage(lang) {
-    const res = await fetch(`./lang/${lang}.json`);
-    const translations = await res.json();
-    applyTranslations(translations);
+    try {
+        const basePath = window.location.pathname.replace(/index\.html$/, "");
+        const res = await fetch(`${basePath}lang/${lang}.json`);
+        const translations = await res.json();
+        applyTranslations(translations);
+    } catch (err) {
+        console.error("Idioma error:", err);
+    }
 }
 
-// Reemplazar textos en la página
 function applyTranslations(translations) {
     document.querySelectorAll("[data-lang]").forEach(el => {
         const key = el.getAttribute("data-lang");
-        if (translations[key]) {
-            el.textContent = translations[key];
-        }
+        if (translations[key]) el.textContent = translations[key];
     });
 }
 
-// Cambiar idioma desde botones EN / ES
-document.addEventListener("click", e => {
-    if (e.target.matches(".lang-option")) {
-        const lang = e.target.dataset.lang;
-
-        localStorage.setItem("lang", lang);
-        currentLang = lang;
-        loadLanguage(lang);
-    }
-});
-
-// Auto detección al entrar
 loadLanguage(currentLang);
-
 
 //ANIMACION TITULO
 const target = document.getElementById('typewriter');
