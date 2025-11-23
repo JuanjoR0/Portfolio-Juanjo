@@ -58,7 +58,6 @@
 .contact-animated:hover {
   box-shadow: 0 0 0 12px transparent;
   color: white;
-  border-radius: 12px;
 }
 
 .contact-animated:hover .arr-1 {

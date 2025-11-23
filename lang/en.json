@@ -1,0 +1,37 @@
+{
+  "nav_home": "home()",
+  "nav_about": "about()",
+  "nav_projects": "projects()",
+  "nav_contact": "contact()",
+  "hero_hello": "Hello World, I'm Juanjo",
+  "hero_title": "Advanced Technician in Web Development",
+  "hero_p": "Enthusiastic about developing digital solutions and always willing to learn and innovate while collaborating with a team.",
+  "hero_bt1": "Download CV",
+  "hero_bt2": "Contact Me",
+
+  "about-title": "About Me",
+  "about-who": "Who Am I?",
+  "about-who-p": "I am a web application developer with strong motivation for the world of technology, and solid knowledge of both frontend and backend development.",
+  "about-goal": "My Goal",
+  "about-goal-p": "My goal is to keep learning and applying my current knowledge to gain experience in various areas such as Front-end and Back-end development.",
+  "about-profile": "My Profile",
+  "about-profile-p": "I am known for my ability to quickly adapt to new environments and technologies, my attention to detail, and my commitment to delivering high-quality products.",
+  "about-techs": "My Technical Skills",
+
+  "projects-1-p": "Allows users to browse, purchase, and manage high-performance vehicles online, while administrators can oversee inventory, orders, and user accounts through a secure management panel.",
+  "my-projects": "My Projects",
+  "projects-2-p": "This is an online store whose main products are different types of avocados from Spain's Tropical Coast. It also includes a recipe blog.",
+  "projects-3": "Agricultural CRM",
+  "projects-3-p": "It allows a company to manage its relationships with clients, businesses, and products, facilitating interaction tracking and data analysis.",
+  "projects-4": "Task Manager",
+  "projects-4-p": "Allows the creation of boards, lists, and tasks, with features like user assignment, due dates, priorities, and tagging.",
+
+  "form-title": "Let's Work Together",
+  "form-p": "I'm interested in opportunities to collaborate on innovative and challenging projects. If you have any proposals, questions, or just want to say hello, feel free to contact me through this form or my social media.",
+  "form-copy": "Copy",
+  "form-send": "Send Message",
+  "form-sent": "Message Sent!",
+  "form-thanks": "Thanks for contacting me. I will reply as soon as possible.",
+
+  "footer-credits": "Created by Juan José Rodriguez Ortega"
+}

@@ -1,0 +1,37 @@
+{
+  "nav_home": "inicio()",
+  "nav_about": "sobre mí()",
+  "nav_projects": "proyectos()",
+  "nav_contact": "contacto()",
+  "hero_hello": "Hola Mundo, soy Juanjo",
+  "hero_title": "Técnico Superior en Desarrollo Web",
+  "hero_p": "Apasionado por desarrollar soluciones digitales y siempre dispuesto a aprender e innovar colaborando con mi equipo.",
+  "hero_bt1": "Descargar CV",
+  "hero_bt2": "Contáctame",
+
+  "about-title": "Sobre Mi",
+  "about-who": "Quien soy?",
+  "about-who-p": "Soy un desarrollador de aplicaciones web con una fuerte motivación por el mundo de la tecnología y un sólido conocimiento tanto en desarrollo frontend como backend.",
+  "about-goal": "Mi objetivo",
+  "about-goal-p": "Mi objetivo es seguir aprendiendo y aplicar mis conocimientos actuales para adquirir experiencia en áreas como el desarrollo Front-end y Back-end.",
+  "about-profile": "Mi perfil",
+  "about-profile-p": "Se me reconoce por mi capacidad para adaptarme rápidamente a nuevos entornos y tecnologías, mi atención al detalle y mi compromiso con la entrega de productos de alta calidad.",
+  "about-techs": "Mis habilidades tecnológicas",
+
+  "projects-1-p":"Permite a los usuarios navegar, comprar y gestionar vehículos de alto rendimiento en línea, mientras que los administradores pueden supervisar el inventario, los pedidos y las cuentas de usuario a través de un panel de gestión seguro.",
+  "my-projects": "Mis proyectos",
+  "projects-2-p": "Es una tienda en línea cuyos productos principales son distintos tipos de aguacates de la Costa Tropical de España. También incluye un blog de recetas.",
+  "projects-3": "CRM Agrícola",
+  "projects-3-p": "Permite a una empresa gestionar sus relaciones con clientes, negocios y productos, facilitando el seguimiento de interacciones y el análisis de datos.",
+  "projects-4": "Gestor de Tareas",
+  "projects-4-p": "Permite la creación de tableros, listas y tareas, con funciones como asignación de usuarios, fechas de vencimiento, prioridades y etiquetado.",
+
+  "form-title": "Trabajemos juntos",
+  "form-p": "Estoy interesado en oportunidades para colaborar en proyectos innovadores y desafiantes. Si tienes alguna propuesta, pregunta o simplemente quieres saludar, no dudes en contactarme a través de este formulario o de mis redes sociales.",
+  "form-copy": "Copiar",
+  "form-send": "Enviar mensaje",
+  "form-sent": "¡Mensaje Enviado!",
+  "form-thanks": "Gracias por contactarme. Responderé lo antes posible.",
+
+  "footer-credits": "Desarrollado por Juan José Rodriguez Ortega"
+}

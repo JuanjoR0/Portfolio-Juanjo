@@ -1,0 +1,115 @@
+/* CONTENEDOR GENERAL */
+.changue-idiom {
+  position: relative;
+}
+
+/* CONTENEDOR DEL ICONO + MENÚ */
+.lang-switch {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+  margin-left: 20px;
+}
+
+/* ------------------------------
+   ICONO PRINCIPAL (BOTÓN)
+   ------------------------------ */
+
+.lang-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1px solid #00bfff;
+  background: #050b1b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 6px;
+  box-shadow: 0 0 12px rgba(0, 191, 255, 0.35);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.lang-icon img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 4px rgba(0,191,255,0.4));
+}
+
+/* EFECTO AL CLICAR (PRESIONADO) */
+.lang-icon:active {
+  transform: translateY(2px);
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.6);
+  border-color: #33d4ff;
+  background: #07112b;
+}
+
+/* ------------------------------
+   MENÚ DESPLEGABLE (ES / EN)
+   ------------------------------ */
+
+.lang-menu {
+  position: absolute;
+  top: 150%;
+  right: 0;
+  padding: 4px 6px;
+  border-radius: 999px;
+  border: 1px solid #00bfff;
+
+  background: radial-gradient(circle at top left, #122b55 0%, #050b1b 60%);
+  display: flex;
+  gap: 1.2rem;
+
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px) scale(0.96);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* ⭐ SE ABRE CUANDO TIENE LA CLASE .open */
+.lang-menu.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+/* ------------------------------
+   OPCIONES DEL MENÚ
+   ------------------------------ */
+
+.lang-option {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 999px;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.lang-option:hover {
+  background: rgba(0, 191, 255, 0.18);
+}
+
+.lang-option.active {
+  background: #00bfff;
+  color: #050b1b;
+}
+
+.separador {
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.726);
+}

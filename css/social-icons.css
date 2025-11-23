@@ -1,7 +1,6 @@
 .social-grid {
   display: flex;
   flex-direction: row;
-  gap: 15px;
   justify-content: flex-end; 
   margin: 0; 
   width: auto;

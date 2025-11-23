@@ -82,6 +82,9 @@ background-color: #0d1129;
 font-size: 1.5rem;
 font-weight: bold;
 }
+.nav{
+  margin-left: 100px;
+}
 .nav-menu {
   gap: 35px;
   display: flex;
