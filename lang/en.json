@@ -1,8 +1,8 @@
 {
-  "nav_home": "home()",
-  "nav_about": "about()",
-  "nav_projects": "projects()",
-  "nav_contact": "contact()",
+  "nav_home": ".home()",
+  "nav_about": ".about()",
+  "nav_projects": ".projects()",
+  "nav_contact": ".contact()",
   "hero_hello": "Hello World, I'm Juanjo",
   "hero_title": "Advanced Technician in Web Development",
   "hero_p": "Enthusiastic about developing digital solutions and always willing to learn and innovate while collaborating with a team.",

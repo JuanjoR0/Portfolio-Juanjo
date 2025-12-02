@@ -1,8 +1,8 @@
 {
-  "nav_home": "inicio()",
-  "nav_about": "sobre mí()",
-  "nav_projects": "proyectos()",
-  "nav_contact": "contacto()",
+  "nav_home": ".inicio()",
+  "nav_about": ".sobre_mí()",
+  "nav_projects": ".proyectos()",
+  "nav_contact": ".contacto()",
   "hero_hello": "Hola Mundo, soy Juanjo",
   "hero_title": "Técnico Superior en Desarrollo Web",
   "hero_p": "Apasionado por desarrollar soluciones digitales y siempre dispuesto a aprender e innovar colaborando con mi equipo.",
