@@ -10,7 +10,8 @@
   border-radius: 50%;
   position: relative;
   z-index: 10;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center;
   background-color: #0A0E21; 
 }
 
